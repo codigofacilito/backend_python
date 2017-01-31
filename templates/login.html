@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')   }}">
+
+	<script type="text/javascript" src=" {{ url_for('static', filename='js/hola.js') }} "></script>
+
+</head>
+<body>
+	<h3>El autor es {{ autor }} .</h3>
+	<p> La hora es {{ ahora }} </p>
+
+	{% if activo %}
+	
+		<ul>
+			{% for tag in tags %}
+				<li>{{ tag }}</li>
+			{% endfor %}
+		</ul>
+	
+	{% endif%}
+		
+</body>
+</html>
